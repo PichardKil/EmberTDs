@@ -7,8 +7,12 @@
       @value = {{this.content}}
         oninput={{action "update"}}
     />
-    <p>{{this.info}}</p>
-    <p>{{this.size}}</p>
+    <div class="alert {{this.style}}" role="alert">
+      Nombre de caractères restants : {{this.size}}
+    </div>
+    <div class="alert alert-primary" role="alert">
+        {{this.info}}
+    </div>
     <button type="button" {{on "click" this.save}}>Save</button>
     <button type="button" {{on "click" this.clear}}>Clear</button>
   </div>

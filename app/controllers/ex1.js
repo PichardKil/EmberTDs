@@ -26,4 +26,11 @@ export default class Ex1Controller extends Controller {
   get size() {
     return MAX - this.content.length;
   }
+  get style() {
+    let text = '';
+    if (this.size < 10) text = 'alert-danger';
+    else if (this.size < 20) text = 'alert-warning';
+    else text = 'alert-primary';
+    return text;
+  }
 }
