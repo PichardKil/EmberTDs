@@ -1,8 +1,17 @@
 {{page-title "Ex1"}}
-<Textarea
-  @type = "text"
-  @value = {{this.info}}/>
+<div class="card space">
+  <div class="card-header bg-primary text-light">Notes</div>
+  <div class="card-body">
+    <Textarea
+      @type = "text"
+      @value = {{this.content}}
+        oninput={{action "update"}}
+    />
+    <p>{{this.info}}</p>
+    <p>{{this.size}}</p>
+    <button type="button" {{on "click" this.save}}>Save</button>
+    <button type="button" {{on "click" this.clear}}>Clear</button>
+  </div>
+</div>
 
-<p>{{this.info.length}}</p>
-<button type="button" {{on "click" this.clear}}>Clear</button>
 {{outlet}}
