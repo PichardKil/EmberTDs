@@ -18,13 +18,12 @@ export default class Services{
   }
 
   get sumActive(){
-    let sum = 0;
-    this.services.forEach(service =>{
-      if(service.active){
-        sum += service.price;
-      }
+    let services=this.services.filterBy('active', true);
+    let price=0;
+    services.forEach(s=>{
+      price+=s.price;
     })
-    return sum;
+    return price;
   }
 }
 

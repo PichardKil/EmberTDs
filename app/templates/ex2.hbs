@@ -1,25 +1,16 @@
 {{page-title "Ex2"}}
 
 <h1>Services</h1>
+
 <div class="card" style="width: 18rem;">
   <p>{{@model.countActive}}</p>
 <ul class="list-group">
-{{#each @model.services as |service|}}
-  {{#if service.active}}
-    <li class="list-group-item d-flex justify-content-between align-items-center active" onclick={{action "toggleActive" service}}>
-      {{service.name}}
-      <span class="badge bg-white text-primary rounded-pill">{{service.price}}€</span>
-    </li>
-  {{else}}
-    <li class="list-group-item d-flex justify-content-between align-items-center" onclick={{action "toggleActive" service}}>
-      {{service.name}}
-      <span class="badge bg-primary rounded-pill">{{service.price}}€</span>
-    </li>
-  {{/if}}
-
-{{/each}}
+  {{#each @model.services as |service|}}
+    <li class="list-group-item {{if service.active 'active' ''}}"
+      {{action "toggleActive" service}}>{{service.name}} {{service.price}}€</li>
+  {{/each}}
 </ul>
   <p>Total : {{@model.sumActive}} €</p>
 </div>
-
+<button class="btn btn-primary" {{action "togglePromo"}}>Code promo</button><br><br>
 {{outlet}}
