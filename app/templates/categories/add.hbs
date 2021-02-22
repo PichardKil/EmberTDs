@@ -1,2 +1,15 @@
 {{page-title "Add"}}
+<thead>
+<tr>
+  <td>Ajouter une catégorie</td>
+</tr>
+</thead>
+<tbody>
+<div class="row">
+  <div class="col">
+    <Input @value={{@model.nom}} placeholder="Entrez une catégorie" class="form-control"/>
+  </div>
+  <button {{ action "save" @model class="btn btn-primary"}}>Enregistrer</button>
+</div>
+</tbody>
 {{outlet}}
