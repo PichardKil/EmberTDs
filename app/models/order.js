@@ -6,9 +6,4 @@ export default class OrderModel extends Model {
   get count() {
     return this.orderdetails.length;
   }
-  @attr('string') status;
-  // @attr('float') amount;
-  // @attr('float') toPay;
-  // @attr('int') itemsNumber;
-  // @attr('int') missingNumber;
 }
