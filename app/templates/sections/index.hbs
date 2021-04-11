@@ -4,14 +4,13 @@
   <div class="ui segment">
     <div  class="ui one column grid">
       <div class="column">
-        <div class="ui attached segment"><i class="tags icon"></i>
+        <div class="ui attached segment">
           Gestion du store
-          <LinkTo class="ui right floated teal button" @route="board">Board</LinkTo>
         </div>
 
         <div class="ui attached green segment">
-          <LinkTo class="btn btn-success" @route="sections.index.add">Ajouter une section</LinkTo>
-          <LinkTo class="btn btn-success" @route="sections.index.addProduct">Ajouter un produit</LinkTo>
+          <LinkTo class="button ui" @route="sections.index.add">Ajouter une section</LinkTo>
+          <LinkTo class="button ui" @route="sections.index.addProduct">Ajouter un produit</LinkTo>
         </div>
 
         <div class="ui attached green segment">
@@ -21,11 +20,6 @@
             <tr>
               <td>{{section.name}}</td>
               <td>{{section.products.length}}</td>
-              <td>
-                <LinkTo class="btn btn-primary btn-sm" @route="sections.edit" @model={{section.id}}><i class="far fa-edit"></i></LinkTo>
-                <LinkTo class="btn btn-secondary btn-sm" @route="sections.index.confirmDelete" @model={{section.id}}><i class="far fa-trash-alt"></i></LinkTo>
-                <!--<button class="btn btn-secondary btn-sm" {{ action "delete" section }}><i class="far fa-trash-alt"></i></button>-->
-              </td>
             </tr>
             {{/each}}
             </tbody>

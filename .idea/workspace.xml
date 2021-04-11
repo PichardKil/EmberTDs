@@ -3,9 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="cbf5835b-02ef-48d1-9b0e-5f8a0393f353" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/section.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/application.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/sections/edit/add-product.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections/edit/add-product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/sections/edit/delete.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/sections/index/confirm-delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections/index/confirm-delete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/sections/delete.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/sections/edit/add-product.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/sections/edit/add-product.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/sections/edit/delete.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/sections/edit/edit.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/sections/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/sections/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/sections/index/add.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/sections/index/add.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +22,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1qzaIlYieOowYvJeGDndFTAphUm" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -45,8 +48,7 @@
       <updated>1618084794480</updated>
       <workItem from="1618084795845" duration="63000" />
       <workItem from="1618084951262" duration="5367000" />
-      <workItem from="1618148118583" duration="1058000" />
-      <workItem from="1618149516225" duration="2249000" />
+      <workItem from="1618148118583" duration="1319000" />
     </task>
     <servers />
   </component>

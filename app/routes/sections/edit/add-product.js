@@ -7,7 +7,6 @@ export default class SectionsIndexEditAddProductRoute extends Route {
   model() {
     return RSVP.hash( {
       product: {},
-      //sections: this.store.findAll('section'),
       section: this.modelFor('sections.edit'),
       products: this.store.findAll('product'),
     });
