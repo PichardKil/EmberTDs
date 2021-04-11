@@ -6,7 +6,7 @@
   {{#if this.userAuth.user}}
     <div class="ui green segment">
       <LinkTo class="ui left floated teal button" @route="board">Tableau de Bord</LinkTo>
-      <LinkTo class="ui left floated teal button" @route="section">Sections</LinkTo>
+      <LinkTo class="ui left floated teal button" @route="sections">Sections</LinkTo>
       <span class="ui label">{{this.userAuth.user.email}}</span>
       <button class="ui black button" {{action "logout"}}>
         Logout
