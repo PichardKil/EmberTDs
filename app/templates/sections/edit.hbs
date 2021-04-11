@@ -1,0 +1,50 @@
+{{page-title "Edit"}}
+
+<div class="twelve wide stretched column">
+  <div class="ui segment">
+    <div  class="ui one column grid">
+      <div class="column">
+
+        <div class="ui attached segment"><i class="tags icon"></i>
+          Gestion de section : {{@model.name}}
+          <LinkTo class="ui right floated teal button" @route="board">Board</LinkTo>
+          <LinkTo class="ui right floated teal button" @route="sections.index">Retour aux sections</LinkTo>
+        </div>
+
+        <div class="ui attached green segment">
+          <LinkTo class="btn btn-success" @route="sections.edit.addProduct" @model={{@model.id}}>Ajouter un produit</LinkTo>
+        </div>
+
+        <div class="ui attached green segment">
+          <table class="ui striped table">
+            <tbody>
+
+
+            {{#each @model.products as |product|}}
+              <tr>
+                <td>
+                  {{product.name}}
+                  {{outlet product.id}}
+                </td>
+                <td>{{product.price}}</td>
+                <td>
+                  <!--<LinkTo class="btn btn-primary btn-sm" @route="sections.edit.edit" @models={{array @model.id product.id }}><i class="far fa-edit"></i></LinkTo>-->
+                  <button class="btn btn-primary btn-sm" {{ action "edit" @model.id product.id}}><i class="far fa-edit"></i></button>
+                  <button class="btn btn-secondary btn-sm" {{ action "delete" product @model}}><i class="far fa-trash-alt"></i></button>
+                </td>
+
+              </tr>
+
+
+
+            {{/each}}
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{{outlet}}

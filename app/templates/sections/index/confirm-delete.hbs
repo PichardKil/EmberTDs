@@ -1,0 +1,19 @@
+{{page-title "ConfirmDelete"}}
+
+<div class="twelve wide stretched column">
+  <div class="ui segment">
+    <div  class="ui one column grid">
+      <div class="column">
+        <div class="ui attached teal segment">
+          La section contient {{@model.products.length}} produits. Êtes-vous sûr de vouloir supprimer cette section ?
+        </div>
+        <div class="ui attached teal segment">
+          <button {{action "delete" @model}} class="ui teal button">Supprimer</button>
+          <LinkTo @route="sections.index" class="ui teal basic button">Annuler</LinkTo>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{outlet}}

@@ -11,4 +11,5 @@ Router.map(function () {
   this.route('board');
   this.route('order', { path: 'order/:order_id' });
   this.route('section');
+  this.route('my-orders');
 });
