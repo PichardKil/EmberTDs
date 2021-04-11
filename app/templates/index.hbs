@@ -1,0 +1,27 @@
+{{page-title "Index"}}
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui blue image header">
+      <div class="content">
+        Log-in to your account
+      </div>
+    </h2>
+    <form class="ui large form" {{action 'login' this.login this.password on='submit'}}>
+      <div class="ui stacked segment">
+        <div class="field">
+          <Input @type="text" @value={{this.login}} name="email" placeholder="E-mail address"/>
+        </div>
+        <div class="field">
+          <Input @type="password" name="password" placeholder="Password" @value={{this.password}}/>
+        </div>
+      </div>
+      <button type="submit" class="ui fluid large teal submit button">Se connecter</button>
+    </form>
+  </div>
+</div>
+<style type="text/css">
+  body {
+    background-color: #FAFAFA;
+  }
+</style>
+{{outlet}}
