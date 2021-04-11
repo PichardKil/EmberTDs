@@ -1,18 +1,34 @@
 {{page-title "Board"}}
-<div class="ui green segment">
-  <span class="ui label">{{@model.employee.email}}</span>
-  <button class="ui black button" {{action "logout"}}>
-    Logout
-  </button>
+  <div class="ui segment">
+    <div  class="ui one column grid">
+      <div class="column">
+        <div class="ui attached segment">
+          Mes Commandes
+        </div>
+
+        <div class="ui attached green segment">
+          <table class="ui striped table">
+            <tbody>
+            <tr>
+              <th>Date</th>
+              <th>Produits</th>
+            </tr>
+
+            {{#each @model.orders as |order|}}
+
+              <tr>
+
+                <td>  <LinkTo @route="order" @model={{order.id}}>{{moment-format order.dateCreation 'LLLL'}}  </LinkTo></td>
+
+                <td>         <span class="ui circular label">{{order.count}}</span></td>
+              </tr>
+
+            {{/each}}
+            </tbody>
+          </table>
+        </div>
+    </div>
+  </div>
 </div>
-<h2>Orders</h2>
-<ul>
-  {{#each @model.orders as |order|}}
-    <li>
-      <LinkTo @route="order" @model={{order.id}}>
-        {{moment-format order.dateCreation 'LLLL'}} <span class="ui circular label">{{order.count}}</span>
-      </LinkTo>
-    </li>
-  {{/each}}
-</ul>
+
 {{outlet}}

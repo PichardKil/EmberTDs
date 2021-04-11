@@ -1,6 +1,6 @@
 import AbstractrouteRoute from './abstractroute';
 import RSVP from 'rsvp';
-import { action } from '@ember/object';
+
 import { inject as service } from '@ember/service';
 
 export default class BoardRoute extends AbstractrouteRoute {
@@ -23,8 +23,4 @@ export default class BoardRoute extends AbstractrouteRoute {
     }
   }
 
-  @action logout() {
-    this.userAuth.logout();
-    this.transitionTo('index');
-  }
 }

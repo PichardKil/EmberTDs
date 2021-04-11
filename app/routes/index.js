@@ -2,7 +2,7 @@ import Route from '@ember/routing/route';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
 
-export default class IndexoRoute extends Route {
+export default class IndexRoute extends Route {
   @service userAuth;
 
   @action login(email, password) {

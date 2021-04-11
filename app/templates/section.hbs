@@ -1,2 +1,38 @@
 {{page-title "Section"}}
+
+<div class="twelve wide stretched column">
+  <div class="ui segment">
+    <div  class="ui one column grid">
+      <div class="column">
+        <div class="ui attached segment">
+          Gestion des Sections
+        </div>
+
+        <div class="ui attached green segment">
+          <table class="ui striped table">
+            <tbody>
+            <tr>
+              <th>Nom</th>
+              <th>Produits</th>
+            </tr>
+
+            {{#each @model as |section|}}
+              <tr>
+                <td>{{section.name}}</td>
+                <td>{{section.products.length}}</td>
+                <td>
+                <!--<button class="btn btn-secondary btn-sm" {{ action "delete" section }}><i class="far fa-trash-alt"></i></button>-->
+                </td>
+              </tr>
+            {{/each}}
+            </tbody>
+          </table>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
 {{outlet}}
